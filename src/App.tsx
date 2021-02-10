@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <p>Testing a brand new changeset for the Zone Blitz Web Application.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
