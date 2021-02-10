@@ -23,7 +23,8 @@
     "test:unit": "react-scripts test",
     "test:style": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "test": "yarn test:unit --watchAll=false && yarn test:style",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "husky": "^5.0.9",
     "prettier": "^2.2.1"
   }
 }
