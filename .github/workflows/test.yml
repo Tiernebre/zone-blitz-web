@@ -16,6 +16,11 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Building for production
+      run: yarn build
+
+    - name: Tests
+      run: yarn test
