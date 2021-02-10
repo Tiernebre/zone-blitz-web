@@ -20,9 +20,11 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint --ext js,ts,tsx src",
+    "lint:fix": "eslint --fix --ext js,ts,tsx src",
     "test:unit": "react-scripts test",
     "test:style": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "test": "yarn test:unit --watchAll=false && yarn test:style",
+    "test": "yarn test:unit --watchAll=false && yarn lint && yarn test:style",
     "eject": "react-scripts eject",
     "postinstall": "husky install"
   },
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-prettier": "^7.2.0",
     "husky": "^5.0.9",
     "prettier": "^2.2.1"
   }
