@@ -17,9 +17,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:unit": "react-scripts test",
+    "test:style": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "test": "yarn test:unit --watchAll=false && yarn test:style",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }
