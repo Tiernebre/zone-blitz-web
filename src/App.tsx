@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -10,8 +9,6 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <p>Testing a brand new changeset for the Zone Blitz Web Application.</p>
-        <p>Testing yet another new change!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
