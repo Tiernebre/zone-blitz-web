@@ -16,6 +16,8 @@ export interface HttpClient {
    * in the form of a JavaScript Object.
    *
    * @param uri The URI of the specific HTTP resource to retrieve.
+   * @throws HttpClientError if the HTTP response has a 4xx status code.
+   * @throws HttpServerError if the HTTP response has a 5xx status code.
    */
   get<T>(uri: string): Promise<T>;
 
@@ -25,6 +27,8 @@ export interface HttpClient {
    *
    * @param uri The URI of the specific HTTP resource to retrieve.
    * @param request An optional parameter that represents the request body to send over.
+   * @throws HttpClientError if the HTTP response has a 4xx status code.
+   * @throws HttpServerError if the HTTP response has a 5xx status code.
    */
   post<T>(uri: string, request?: any): Promise<T>;
 }
